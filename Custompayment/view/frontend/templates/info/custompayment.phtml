@@ -1,0 +1,20 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+/**
+ * @var $block \Hirenkava\Custompayment\Block\Info\Custompayment
+ */
+?>
+<dl class="payment-method custompayment">
+    <dt class="title"><?php echo $block->escapeHtml($block->getMethod()->getTitle()) ?></dt>
+    <dd class="content">
+        <strong><?php echo $block->escapeHtml(__('eVoucher Number')) ?></strong>
+        <span class="number"><?php echo $block->escapeHtml($block->getInfo()->getEvoucher()) ?></span>
+    </dd>
+	<dd class="content">
+        <strong><?php echo $block->escapeHtml(__('eVoucher Amount')) ?></strong>
+        <span class="number"><?php echo $block->escapeHtml($block->getInfo()->getVoucherAmount()) ?></span>
+    </dd>
+</dl>

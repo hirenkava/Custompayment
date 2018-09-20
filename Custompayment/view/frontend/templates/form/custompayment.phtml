@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/**
+ * @var $block \Hirenkava\Custompayment\Block\Info\Custompayment
+ */
+$methodCode = $block->escapeHtml($block->getMethodCode());
+?>
+<fieldset class="fieldset items <?php /* @noEscape */ echo $methodCode ?>" id="payment_form_<?php /* @noEscape */ echo $methodCode ?>" style="display: none">
+    <div class="field number required">
+        <label for="evoucher" class="label"><span><?php echo $block->escapeHtml(__('eVoucher Number')) ?></span></label>
+        <div class="control">
+            <input type="text" id="evoucher" name="payment[evoucher]" title="<?php echo $block->escapeHtml(__('eVoucher Number')) ?>"
+                   class="input-text required-entry"
+                   value="<?php echo $block->escapeHtml($block->getInfoData('evoucher')) ?>" />
+        </div>
+    </div>
+	<div class="field number required">
+        <label for="voucher_amount" class="label"><span><?php echo $block->escapeHtml(__('eVoucher Number')) ?></span></label>
+        <div class="control">
+            <input type="text" id="voucher_amount" name="payment[voucher_amount]" title="<?php echo $block->escapeHtml(__('eVoucher Amount')) ?>"
+                   class="input-text required-entry"
+                   value="<?php echo $block->escapeHtml($block->getInfoData('voucher_amount')) ?>" />
+        </div>
+    </div>
+</fieldset>
